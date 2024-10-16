@@ -1,30 +1,26 @@
-from init_knap import init
+import starter_generator as sg
 from random import randint
 
 # cabeçalho, iniciar constantes
-n_itens = 15
-w_max = 100
-v_max = 100
+n_itens = 15  # Quantidade de itens do problema
+w_max = 100  # peso máximo de um item
+v_max = 100  # valor máximo de um item
 
 
-def random_choice():
-    choice = []
-    for i in range(n_itens):
-        choice.append(randint(0, 1))
-    return choice
-
-
-def show_inst(weight, value, c_max):
-    print(weight)
-    print(value)
-    print(min(weight))
-    print(sum(weight))
-    print(c_max)
+def show_inst(weight, value, c_max):  # dados sobre uma instância do problema
+    print("Lista de pesos:\n", weight)
+    print("Lista de valores:\n", value)
+    print("Menor peso:", min(weight))
+    print("Soma dos pesos:", sum(weight))
+    print("Capacidade da mochila:", c_max)
 
 
 def main():
-    weight, value, c_max = init(n_itens, w_max, v_max)
+    weight, value, c_max = sg.init(
+        n_itens, w_max, v_max
+    )  # inicia itens aleatórios e uma capacidade para a mochila
     show_inst(weight, value, c_max)
+    print(sg.random_choice(n_itens))
 
 
 if __name__ == "__main__":
