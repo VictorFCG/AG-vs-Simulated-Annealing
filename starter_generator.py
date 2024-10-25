@@ -13,6 +13,6 @@ def init(n_itens, w_max, v_max):
     for i in range(n_itens):
         weight.append(randint(1, w_max))
         value.append(randint(1, v_max))
-    c_max = randint(min(weight), sum(weight))
+    #c_max = randint(min(weight), sum(weight))
 
-    return weight, value, c_max
+    return weight, value
