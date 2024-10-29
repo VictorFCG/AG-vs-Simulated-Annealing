@@ -1,10 +1,12 @@
 from random import randint
 
-def random_choice(n_itens): #gera uma escolha de itens 
+
+def random_choice(n_itens):  # gera uma escolha de itens/ um estado
     choice = []
     for i in range(n_itens):
         choice.append(randint(0, 1))
     return choice
+
 
 def init(n_itens, w_max, v_max):
     weight = []
