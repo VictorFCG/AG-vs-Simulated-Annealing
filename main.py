@@ -3,9 +3,9 @@ import genetic_alg as ga
 from random import randint
 
 # cabeçalho, iniciar constantes
-n_itens = 15  # Quantidade de itens do problema
-w_max = 100  # peso máximo de um item
-v_max = 100  # valor máximo de um item
+n_itens = 30  # Quantidade de itens do problema
+w_max = 50  # peso máximo de um item
+v_max = 50  # valor máximo de um item
 # algoritmo genético
 n_pop = 100  # tamanho da população
 gen_limmit = 100  # limite de iterações/gerações
